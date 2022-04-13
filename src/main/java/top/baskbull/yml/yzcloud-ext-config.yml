@@ -1,0 +1,48 @@
+GoPayExtensionService: # 扩展点配置名称
+  - impl:
+    enable: true  # 是否启用，仅支持 true/false
+    name: GoPayExtensionServiceImpl # 开发者自定义name
+    bean: GoPayExtensionServiceImpl  # 开发者自定义 bean name
+    tag: goPayImpl2 # 版本标识, 与扩展点实现Bean组合实现唯一标识, 非必填
+    biz-identity: # 业务标。value填id，需要至DIY平台查询
+      platform: # 平台定义业务标
+        shop-type: 1,2    # 业务标识：商品类型
+        activity-type: 3,4,5 # 业务标识：活动类型
+      diy: # 开发者自定义业务标
+        shop: 10,11,12
+        order:
+  - impl:
+    name: GoPayExtensionServiceImpl2 # 开发者自定义name
+    bean: GoPayExtensionServiceImpl2  # 开发者自定义 bean name
+    tag: goPayImpl2 # 版本标识, 与扩展点实现Bean组合实现唯一标识, 非必填
+    biz-identity: # 业务标。value填id，需要至DIY平台查询
+      platform: # 平台定义业务标
+        shop-type: 1,2    # 业务标识：商品类型
+        activity-type: 3,4,5 # 业务标识：活动类型
+      diy: # 开发者自定义业务标
+        shop: 10,11,12
+        order: 100
+GoPayService: # 扩展点配置名称
+  - impl:
+    enable: true  # 是否启用，仅支持 true/false
+    name: GoPayExtensionServiceImpl # 开发者自定义name
+    bean: GoPayExtensionServiceImpl  # 开发者自定义 bean name
+    tag: goPayImpl2 # 版本标识, 与扩展点实现Bean组合实现唯一标识, 非必填
+    biz-identity: # 业务标。value填id，需要至DIY平台查询
+      platform: # 平台定义业务标
+        shop-type: 1,2    # 业务标识：商品类型
+        activity-type: 3,4,5 # 业务标识：活动类型
+      diy: # 开发者自定义业务标
+        shop: 10,11,12
+        order:
+  #  - impl:
+#  - name: GoPayExtensionServiceImpl2 # 开发者自定义name
+#    bean: GoPayExtensionServiceImpl2  # 开发者自定义 bean name
+#    tag: goPayImpl2 # 版本标识, 与扩展点实现Bean组合实现唯一标识, 非必填
+#    biz-identity: # 业务标。value填id，需要至DIY平台查询
+#      platform: # 平台定义业务标
+#        shop-type: 1,2    # 业务标识：商品类型
+#        activity-type: 3,4,5 # 业务标识：活动类型
+#      diy: # 开发者自定义业务标
+#        shop: 10,11,12
+#        order: 100
